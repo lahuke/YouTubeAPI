@@ -4,8 +4,6 @@ $(document).ready(function(){
       $('.js-search-form').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('.js-query').val();
-        var queryTarget = $(event.currentTarget).find('.js-query');
-        var query = queryTarget.val();
         getRequest(searchTerm);
       });
   });
