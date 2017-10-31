@@ -3,7 +3,7 @@ var YouTubeSearchURL = 'https://www.googleapis.com/youtube/v3/search';
 
 var RESULT_HTML_TEMPLATE = (
   '<div>' +
-    '<a class="thumbnailLink" href="" target="_blank"><img class="thethumbnails" src=""></img></a>' + 
+    '<a class="thumbnailLink" href=""><img class="thethumbnails" src=""></img></a>' + 
   '</div>'
 );
 
