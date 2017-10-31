@@ -17,4 +17,9 @@ button {
 input {
 	border-radius: 6px;
 	padding: .5em;
+	width: 50%;
+	text-align: center;
+}
+li {
+	list-style: none;
 }

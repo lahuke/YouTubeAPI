@@ -3,7 +3,7 @@ var YouTubeSearchURL = 'https://www.googleapis.com/youtube/v3/search';
 
 var RESULT_HTML_TEMPLATE = (
   '<div>' +
-    '<a class="js-result-name" img src="" target="_blank"></a>' + 
+    '<a class="thumbnailLink" href="" target="_blank"><img class="thethumbnails" src=""></img></a>' + 
   '</div>'
 );
 
@@ -20,8 +20,8 @@ function getDataFromApi(searchTerm, callback) {
 
 function renderResult(result) {
   var template = $(RESULT_HTML_TEMPLATE);
-  template.find(".js-result-name").text(result.snippet.title)
-  
+  template.find(".thethumbnails").attr('src', result.snippet.thumbnails.medium.url)
+  template.find(".thumbnailLink").attr('href', 'https://www.youtube.com/watch?v=' + result.id.videoId)
   return template;
 }
 
